@@ -1,0 +1,14 @@
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\bin\Debug\MinecraftCC.exe.config
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\bin\Debug\MinecraftCC.exe
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\bin\Debug\MinecraftCC.pdb
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\obj\Debug\MinecraftCC.csprojAssemblyReference.cache
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\obj\Debug\MainWindow.g.cs
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\obj\Debug\App.g.cs
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\obj\Debug\MinecraftCC_MarkupCompile.cache
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\obj\Debug\MinecraftCC_MarkupCompile.lref
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\obj\Debug\MainWindow.baml
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\obj\Debug\MinecraftCC.g.resources
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\obj\Debug\MinecraftCC.Properties.Resources.resources
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\obj\Debug\MinecraftCC.csproj.GenerateResource.cache
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\obj\Debug\MinecraftCC.exe
+D:\Users\kdglad\source\repos\CS4473\MinecraftCC\obj\Debug\MinecraftCC.pdb
