@@ -26,11 +26,11 @@ namespace MinecraftCC {
 		Map map;
 
 		public void InitializeMap() {
-			map = new Map(10, 10, 0);
+			map = new Map(10, 10);
 			for (int i = 0; i < map.Cells.GetUpperBound(0); i++) {
-				game.RowDefinitions.Add(new RowDefinition());
+				gdGame.RowDefinitions.Add(new RowDefinition());
 				for (int j = 0; j < map.Cells.GetUpperBound(1); j++) {
-					game.ColumnDefinitions.Add(new ColumnDefinition());
+					gdGame.ColumnDefinitions.Add(new ColumnDefinition());
 					TextBlock tb = new TextBlock();
 					tb.Name = "tb_" + j + "_" + i;
 					tb.TextWrapping = TextWrapping.Wrap;
@@ -40,16 +40,18 @@ namespace MinecraftCC {
 					border.BorderBrush = new SolidColorBrush(Colors.Black);
 					border.BorderThickness = new Thickness(1);
 					tb.Background = map.Cells[i, j].Biome.Color;
-					game.Children.Add(tb);
+					gdGame.Children.Add(tb);
 					Grid.SetRow(tb, i);
 					Grid.SetColumn(tb, j);
 					Grid.SetColumn(border, j);
 					Grid.SetRow(border, i);
-					game.Children.Add(border);
+					gdGame.Children.Add(border);
 				}
 			}
-
 		}
 
+		private void btnGenerate_Click(object sender, RoutedEventArgs e) {
+			Generator g = new Generator(cbTerrain.SelectedIndex, cbBuildingStyle.SelectedIndex, cbVillageType.SelectedIndex);
+		}
 	}
 }

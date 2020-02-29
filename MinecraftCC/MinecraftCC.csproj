@@ -63,7 +63,42 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Biome.cs" />
+    <Compile Include="Biomes\Coast.cs" />
+    <Compile Include="Biomes\Desert.cs" />
+    <Compile Include="Biomes\Forest.cs" />
+    <Compile Include="Biomes\Mountain.cs" />
+    <Compile Include="Biomes\Ocean.cs" />
+    <Compile Include="Biomes\Plains.cs" />
+    <Compile Include="Biomes\Tundra.cs" />
     <Compile Include="Building.cs" />
+    <Compile Include="Buildings\Brewery.cs" />
+    <Compile Include="Buildings\Brickyard.cs" />
+    <Compile Include="Buildings\Circus.cs" />
+    <Compile Include="Buildings\CityCenter.cs" />
+    <Compile Include="Buildings\Field.cs" />
+    <Compile Include="Buildings\Fisher.cs" />
+    <Compile Include="Buildings\Fountain.cs" />
+    <Compile Include="Buildings\HopField.cs" />
+    <Compile Include="Buildings\House.cs" />
+    <Compile Include="Buildings\Hut.cs" />
+    <Compile Include="Buildings\Lumberjack.cs" />
+    <Compile Include="Buildings\Mansion.cs" />
+    <Compile Include="Buildings\Market.cs" />
+    <Compile Include="Buildings\Mason.cs" />
+    <Compile Include="Buildings\Mill.cs" />
+    <Compile Include="Buildings\Park.cs" />
+    <Compile Include="Buildings\Resort.cs" />
+    <Compile Include="Buildings\Sawmill.cs" />
+    <Compile Include="Buildings\Shaman.cs" />
+    <Compile Include="Buildings\Statue.cs" />
+    <Compile Include="Buildings\Tavern.cs" />
+    <Compile Include="Buildings\Temple.cs" />
+    <Compile Include="Buildings\Tower.cs" />
+    <Compile Include="Buildings\Warehouse.cs" />
+    <Compile Include="Buildings\WaterPlateau.cs" />
+    <Compile Include="BuildingThemeGroup.cs" />
+    <Compile Include="Generator.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -71,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Map.cs" />
+    <Compile Include="MapCell.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
