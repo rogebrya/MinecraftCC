@@ -7,7 +7,6 @@ namespace MinecraftCC {
 	public class Map {
 		private int _xSize;
 		private int _zSize;
-		//private Biome _biome;
 		//private int _baseElevation = 64;
 
 		private MapCell[,] _cells;
@@ -34,14 +33,15 @@ namespace MinecraftCC {
 		}
 
 		public void FillBiomeList() {
-			Biomes = new List<Biome>();
-			Biomes.Add(new Coast());		//0
-			Biomes.Add(new Desert());		//1
-			Biomes.Add(new Forest());		//2
-			Biomes.Add(new Mountain());		//3
-			Biomes.Add(new Ocean());		//4
-			Biomes.Add(new Plains());		//5
-			Biomes.Add(new Tundra());		//6
+			Biomes = new List<Biome> {
+				new Coast(),        //0
+				new Desert(),       //1
+				new Forest(),       //2
+				new Mountain(),     //3
+				new Ocean(),        //4
+				new Plains(),       //5
+				new Tundra()        //6
+			};
 		}
 
 		/*

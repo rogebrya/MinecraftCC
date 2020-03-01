@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MinecraftCC.Buildings {
-    class Mansion : Building {
+    public class Mansion : Building {
         public Mansion() {
             _id = BuildingID.Mansion;
             _name = "Mansion";
@@ -30,5 +30,3 @@ namespace MinecraftCC.Buildings {
         }
     }
 }
-(cityCentre, 8), (shaman, 6), (plateau, 6), (wallPlateau, 6), (statue, 5), (fountain, 3), (park, 2), (market, 2),
-				(temple, 2), (jewelry, 2), (circus, -3), (wall, -3) };

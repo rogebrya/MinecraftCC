@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MinecraftCC.Buildings {
-    class Shaman : Building {
+    public class Shaman : Building {
         public Shaman() {
             _id = BuildingID.Shaman;
             _name = "Shaman";

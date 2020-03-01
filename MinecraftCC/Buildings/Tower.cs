@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MinecraftCC.Buildings {
-    class Tower : Building {
+    public class Tower : Building {
         public Tower() {
             _id = BuildingID.Tower;
             _name = "Tower";

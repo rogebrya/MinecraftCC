@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MinecraftCC.Buildings {
-    class HopField : Building {
+    public class HopField : Building {
         public HopField() {
             _id = BuildingID.HopField;
             _name = "Hop Field";

@@ -72,6 +72,14 @@
     <Compile Include="Biomes\Plains.cs" />
     <Compile Include="Biomes\Tundra.cs" />
     <Compile Include="Building.cs" />
+    <Compile Include="BuildingPacks\BrewingPack.cs" />
+    <Compile Include="BuildingPacks\CommercePack.cs" />
+    <Compile Include="BuildingPacks\FarmingPack.cs" />
+    <Compile Include="BuildingPacks\FishingPack.cs" />
+    <Compile Include="BuildingPacks\HousingPack.cs" />
+    <Compile Include="BuildingPacks\LumberPack.cs" />
+    <Compile Include="BuildingPacks\OrnamentalPack.cs" />
+    <Compile Include="BuildingPacks\ReligiousPack.cs" />
     <Compile Include="Buildings\Brewery.cs" />
     <Compile Include="Buildings\Brickyard.cs" />
     <Compile Include="Buildings\Circus.cs" />
@@ -97,7 +105,7 @@
     <Compile Include="Buildings\Tower.cs" />
     <Compile Include="Buildings\Warehouse.cs" />
     <Compile Include="Buildings\WaterPlateau.cs" />
-    <Compile Include="BuildingThemeGroup.cs" />
+    <Compile Include="BuildingPack.cs" />
     <Compile Include="Generator.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

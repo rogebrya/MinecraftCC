@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MinecraftCC.Buildings {
-    class Hut : Building {
+    public class Hut : Building {
         public Hut() {
             _id = BuildingID.Hut;
             _name = "Hut";

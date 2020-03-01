@@ -19,6 +19,8 @@ namespace MinecraftCC {
 			_biome = b;
 		}
 
+		public int X { get => _xCoordinate; set => _xCoordinate = value; }
+		public int Z { get => _zCoordinate; set => _zCoordinate = value; }
 		public Building Building { get => _building; set => _building = value; }
 		public Biome Biome { get => _biome; set => _biome = value; }
 	}

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MinecraftCC.Buildings {
-    class Market : Building {
+    public class Market : Building {
         public Market() {
             _id = BuildingID.Market;
             _name = "Market";

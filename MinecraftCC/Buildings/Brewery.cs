@@ -10,7 +10,7 @@ namespace MinecraftCC.Buildings {
             _id = BuildingID.Brewery;
             _name = "Brewery";
             _baseScore = 7;
-            _radius = 3.5;
+            _radius = 4; //3.5
             _scoreMods = new List<(BuildingID, int)>() { 
                 (BuildingID.Brewery, -10), 
                 (BuildingID.HopField, 5), 

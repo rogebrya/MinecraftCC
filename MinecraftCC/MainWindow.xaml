@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MINERVA: MINEcraft Realistic Village Architect" Height="450" Width="800">
     <Grid>
-        <Grid x:Name="gdGame" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="378">
+        <Grid x:Name="gdGame" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="400">
 
         </Grid>
         <Button x:Name="btnGenerate" Content="Generate Village Layout" HorizontalAlignment="Left" Margin="519,270,0,0" VerticalAlignment="Top" Width="140" Height="39" Click="btnGenerate_Click"/>

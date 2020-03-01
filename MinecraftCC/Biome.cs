@@ -21,6 +21,7 @@ namespace MinecraftCC {
 		protected string _name;
 		protected SolidColorBrush _color;
 
+		public BiomeID ID { get => _id; set => _id = value; }
 		public string Name { get => _name; set => _name = value; }
 		public SolidColorBrush Color { get => _color; set => _color = value; }
 	}

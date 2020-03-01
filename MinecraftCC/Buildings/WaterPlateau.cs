@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MinecraftCC.Buildings {
-    class WaterPlateau : Building {
+    public class WaterPlateau : Building {
         public WaterPlateau() {
             _id = BuildingID.WaterPlateau;
             _name = "Water Plateau";
@@ -20,3 +20,4 @@ namespace MinecraftCC.Buildings {
             _reqBiome = new List<BiomeID>() { BiomeID.Coast };
         }
     }
+}
