@@ -1,0 +1,39 @@
+﻿<Window x:Name="wdMainWindow" x:Class="MinecraftCC.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MinecraftCC"
+        mc:Ignorable="d"
+        Title="MINERVA: MINEcraft Realistic Village Architect" Height="660" Width="900">
+    <Grid>
+        <Grid x:Name="gdGame" HorizontalAlignment="Left" Height="600" Margin="10,10,0,0" VerticalAlignment="Top" Width="600">
+
+        </Grid>
+        <Grid x:Name="gdUI" HorizontalAlignment="Left" Height="549" Margin="615,0,0,0" VerticalAlignment="Top" Width="269" Visibility="Hidden">
+            <ComboBox x:Name="cbTerrain" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Margin="62,99,0,0">
+                <ComboBoxItem IsSelected="True">Superflat</ComboBoxItem>
+                <ComboBoxItem>Grassland</ComboBoxItem>
+                <ComboBoxItem>SeaShore</ComboBoxItem>
+                <ComboBoxItem>Mountain</ComboBoxItem>
+                <ComboBoxItem>Forest</ComboBoxItem>
+                <ComboBoxItem>Jungle</ComboBoxItem>
+                <ComboBoxItem>Desert</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="cbBuildingStyle" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Margin="62,240,0,0">
+                <ComboBoxItem IsSelected="True">Viking</ComboBoxItem>
+                <ComboBoxItem>MiddleAges</ComboBoxItem>
+                <ComboBoxItem>Ancient</ComboBoxItem>
+            </ComboBox>
+            <ComboBox x:Name="cbVillageType" HorizontalAlignment="Left" VerticalAlignment="Top" Width="133" Margin="62,173,0,0">
+                <ComboBoxItem IsSelected="True">Farming</ComboBoxItem>
+                <ComboBoxItem>Logging</ComboBoxItem>
+                <ComboBoxItem>Trading</ComboBoxItem>
+            </ComboBox>
+            <Label x:Name="lblTerrain" Content="Terrain Type:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="62,68,0,0"/>
+            <Label x:Name="lblBuildingStyle" Content="Building Style:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="62,209,0,0"/>
+            <Label x:Name="lblVillageType" Content="Village Type:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="62,142,0,0"/>
+        </Grid>
+        <Button x:Name="btnGenerate" Content="Generate Village Layout" HorizontalAlignment="Left" VerticalAlignment="Top" Width="140" Height="39" Click="btnGenerate_Click" Margin="681,430,0,0"/>
+    </Grid>
+</Window>
