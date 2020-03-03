@@ -8,14 +8,14 @@ namespace MinecraftCC.Buildings {
     public class Lumberjack : Building {
         public Lumberjack() {
             _id = BuildingID.Lumberjack;
-            _name = "Lumberjack";
+            _name = "Lumber";
             _baseScore = 0;
-            _radius = 10;
+            _radius = 2; //10
             _scoreMods = new List<(BuildingID, int)>() {
-                (BuildingID.Lumberjack, -6),
+                (BuildingID.Lumberjack, -1), //-6
                 (BuildingID.Sawmill, 5),
-                (BuildingID.Statue, 4),
-                //(BuildingID.Tree, 1),
+                (BuildingID.Statue, 2), //4
+                (BuildingID.Trees, 10),
             };
             _reqBiome = new List<BiomeID>() { BiomeID.Plains, BiomeID.Desert, BiomeID.Tundra };
         }

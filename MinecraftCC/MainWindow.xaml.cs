@@ -21,7 +21,7 @@ namespace MinecraftCC {
 		public MainWindow() {
 			InitializeComponent();
 			InitializeMap();
-			//CreateTestTerrain();
+			CreateTestTerrain();
 		}
 
 		Map map;
@@ -100,14 +100,22 @@ namespace MinecraftCC {
 			};
 			foreach ((int, int, BiomeID) alt in alterations) {
 				map.Cells[alt.Item1, alt.Item2].Biome = map.Biomes[(int)(alt.Item3)];
+				if (alt.Item3 == BiomeID.Forest) {
+					map.Cells[alt.Item1, alt.Item2].Building = new Buildings.Trees();
+				}
 			}
 			UpdateMapDisplay();
 		}
 
 		private void btnGenerate_Click(object sender, RoutedEventArgs e) {
 			((Button)sender).IsEnabled = false;
-			Generator g = new Generator(map, cbBuildingStyle.SelectedIndex, cbVillageType.SelectedIndex);
-			g.Generate();
+			int scoreThreshold = 3 * map.XSize * map.ZSize;
+			int totalScore = 0;
+			//while (totalScore < scoreThreshold) {
+				Generator g = new Generator(map, cbBuildingStyle.SelectedIndex, cbVillageType.SelectedIndex);
+				g.Generate();
+				totalScore = g.TotalScore;
+			//}
 			UpdateMapDisplay();
 			((Button)sender).IsEnabled = true;
 		}
@@ -119,6 +127,12 @@ namespace MinecraftCC {
 				tb.Background = map.Cells[i, j].Biome.Color;
 				if (map.Cells[i, j].Building != null) {
 					tb.Text = map.Cells[i, j].Building.Name;
+					if (map.Cells[i, j].Biome.Color == Brushes.DarkBlue || map.Cells[i, j].Biome.Color == Brushes.Green) {
+						tb.Foreground = new SolidColorBrush(Colors.White);
+					}
+					if (map.Cells[i, j].Building.ID == BuildingID.CityCenter) {
+						tb.Foreground = new SolidColorBrush(Colors.Red);
+					}
 				}
 				j++;
 				if (j == map.ZSize) {

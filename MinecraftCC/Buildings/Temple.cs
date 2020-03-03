@@ -10,7 +10,7 @@ namespace MinecraftCC.Buildings {
             _id = BuildingID.Temple;
             _name = "Temple";
             _baseScore = -75;
-            _radius = 1;
+            _radius = 2;
             _scoreMods = new List<(BuildingID, int)>() {
                 (BuildingID.Tavern, -15),
                 (BuildingID.Statue, 40),

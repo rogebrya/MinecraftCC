@@ -103,6 +103,7 @@
     <Compile Include="Buildings\Tavern.cs" />
     <Compile Include="Buildings\Temple.cs" />
     <Compile Include="Buildings\Tower.cs" />
+    <Compile Include="Buildings\Trees.cs" />
     <Compile Include="Buildings\Warehouse.cs" />
     <Compile Include="Buildings\WaterPlateau.cs" />
     <Compile Include="BuildingPack.cs" />

@@ -22,7 +22,7 @@ namespace MinecraftCC.Buildings {
                 (BuildingID.Field, 3),
                 (BuildingID.Brewery, 2),
                 (BuildingID.Fisher, 2),
-                //(BuildingID.Tree, 1),
+                (BuildingID.Trees, 1),
                 (BuildingID.Mill, -3),
                 (BuildingID.House, -5),
                 (BuildingID.Brickyard, -5),

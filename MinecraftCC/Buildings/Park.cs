@@ -20,7 +20,7 @@ namespace MinecraftCC.Buildings {
                 //(BuildingID.Plateau, 2),
                 (BuildingID.Statue, 2),
                 (BuildingID.CityCenter, 2),
-                //(BuildingID.Tree, 1),
+                (BuildingID.Trees, 1),
                 (BuildingID.House, 1),
                 (BuildingID.Mansion, 1),
                 //(BuildingID.Wall, -2),

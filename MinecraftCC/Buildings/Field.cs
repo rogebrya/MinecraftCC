@@ -8,7 +8,7 @@ namespace MinecraftCC.Buildings {
     public class Field : Building {
         public Field() {
             _id = BuildingID.Field;
-            _name = "Field";
+            _name = "Potato Field";
             _baseScore = 3;
             _radius = 2;
             _scoreMods = new List<(BuildingID, int)>() {

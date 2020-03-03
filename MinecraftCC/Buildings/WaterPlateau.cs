@@ -8,14 +8,14 @@ namespace MinecraftCC.Buildings {
     public class WaterPlateau : Building {
         public WaterPlateau() {
             _id = BuildingID.WaterPlateau;
-            _name = "Water Plateau";
+            _name = "Pier";
             _baseScore = 13;
             _radius = 3;
             _scoreMods = new List<(BuildingID, int)>() {
                 (BuildingID.WaterPlateau, 1),
                 (BuildingID.Sawmill, 2),
                 (BuildingID.Statue, 2),
-                //(BuildingID.Tree, 1)
+                (BuildingID.Trees, 1)
             };
             _reqBiome = new List<BiomeID>() { BiomeID.Coast };
         }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MinecraftCC.Buildings;
 using MinecraftCC.BuildingPacks;
 
+// Need to make copy of map for multiple iterations
 namespace MinecraftCC {
     public class Generator {
         private Map _map;
@@ -28,14 +29,18 @@ namespace MinecraftCC {
             };
         }
 
+        public int TotalScore { get => _totalScore; }
+
         public void Generate() {
             PlaceStartingPoint();
             GenerateListOfAvaliableSpaces();
-            bool loop = true;
-            while (loop == true && _avaliableSpaces.Count > (0.15 * _map.XSize * _map.ZSize)) {
+            while (_avaliableSpaces.Count > 0 && _avaliableSpaces.Count > (0.3 * _map.XSize * _map.ZSize)) {
                 BuildingPack bp = PickBuildingPack();
-                Building b = PickBuilding(bp);
-                loop = PlaceBuilding(b);
+                List<int> pickedIndicies = new List<int>();
+                while (pickedIndicies.Count < bp.Buildings.Count) {
+                    Building b = PickBuilding(bp, pickedIndicies);
+                    PlaceBuilding(b);
+                }
             }
         }
 
@@ -46,8 +51,13 @@ namespace MinecraftCC {
         }
 
         // Done
-        private Building PickBuilding(BuildingPack bp) {
-            return bp.Buildings[rnd.Next(0, bp.Buildings.Count)];
+        private Building PickBuilding(BuildingPack bp, List<int> pickedIndicies) {
+            int picked = rnd.Next(0, bp.Buildings.Count); ; 
+            while (pickedIndicies.Contains(picked)) {
+                picked = rnd.Next(0, bp.Buildings.Count);
+            }
+            pickedIndicies.Add(picked);
+            return bp.Buildings[picked];
         }
 
         // Done
@@ -55,36 +65,35 @@ namespace MinecraftCC {
             CityCenter center = new CityCenter();
             int x = rnd.Next(0, _map.XSize);
             int z = rnd.Next(0, _map.ZSize);
-            if (center.ReqBiome.Contains(_map.Cells[x, z].Biome.ID)) {
-                _map.Cells[x, z].Building = center;
+            while (!center.ReqBiome.Contains(_map.Cells[x, z].Biome.ID)) {
+                x = rnd.Next(0, _map.XSize);
+                z = rnd.Next(0, _map.ZSize);
             }
+            _map.Cells[x, z].Building = center;
         }
 
         // Done
-        private bool PlaceBuilding(Building b) {
+        private void PlaceBuilding(Building b) {
             int maxBuildingScore = 0;
-            if (_avaliableSpaces.Count == 0) {
-                return false;
-            }
-            MapCell maxBuildingScoreLocation = _avaliableSpaces[0];
+            List<MapCell> maxBuildingScoreLocations = new List<MapCell>();
             int tempBuildingScore = 0;
             foreach (MapCell mc in _avaliableSpaces) {
                 if (b.ReqBiome.Contains(mc.Biome.ID)) {
                     tempBuildingScore = CalculateScore(mc, b);
                     if (tempBuildingScore > maxBuildingScore) {
                         maxBuildingScore = tempBuildingScore;
-                        maxBuildingScoreLocation = mc;
+                        maxBuildingScoreLocations.Clear();
+                        maxBuildingScoreLocations.Add(mc);
+                    } else if (tempBuildingScore == maxBuildingScore){
+                        maxBuildingScoreLocations.Add(mc);
                     }
-                } else {
-                    return true;
                 }
             }
-            if (maxBuildingScore != 0) {
-                maxBuildingScoreLocation.Building = b;
+            if (maxBuildingScoreLocations.Count > 0) {
+                maxBuildingScoreLocations[rnd.Next(0, maxBuildingScoreLocations.Count)].Building = b;
                 _totalScore += maxBuildingScore;
-                _avaliableSpaces.Remove(maxBuildingScoreLocation);
+                _avaliableSpaces.Remove(maxBuildingScoreLocations[rnd.Next(0, maxBuildingScoreLocations.Count)]);
             }
-            return true;
         }
 
         // Done

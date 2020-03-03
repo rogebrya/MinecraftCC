@@ -8,9 +8,9 @@ namespace MinecraftCC.Buildings {
     public class HopField : Building {
         public HopField() {
             _id = BuildingID.HopField;
-            _name = "Hop Field";
+            _name = "Wheat Field";
             _baseScore = 5;
-            _radius = 3;
+            _radius = 1; //3
             _scoreMods = new List<(BuildingID, int)>() {
                 (BuildingID.HopField, 2),
                 (BuildingID.Statue, 4),
